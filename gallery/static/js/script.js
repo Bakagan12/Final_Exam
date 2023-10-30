@@ -55,7 +55,7 @@ const Image2 = document.getElementById('view-images2');
 const Image3 = document.getElementById('view-images3');
 const Image4 = document.getElementById('view-images4');
 const Image5 = document.getElementById('view-images5');
-const Image6 = document.getElementById('view-images16');
+const Image6 = document.getElementById('view-images6');
 
 
 
@@ -70,32 +70,6 @@ const showImageButton6 = document.getElementById("show-image-button6");
 
 const imageModal = document.querySelector(".image-modal");
 const closeImageButton = document.getElementById("close-image-button");
-
-// Add a click event to the "Show Image" button
-showImageButton1.addEventListener("click", function () {
-    console.log("Image 1 loaded successfully");
-    Image1.style.display = "block";
-});
-showImageButton2.addEventListener("click", function () {
-    console.log("Image 2 loaded successfully");
-    imageModal.style.display = "block";
-});
-showImageButton3.addEventListener("click", function () {
-    console.log("Image 3 loaded successfully");
-    imageModal.style.display = "block";
-});
-showImageButton4.addEventListener("click", function () {
-    console.log("Image 4 loaded successfully");
-    imageModal.style.display = "block";
-});
-showImageButton5.addEventListener("click", function () {
-    console.log("Image 5 loaded successfully");
-    imageModal.style.display = "block";
-});
-showImageButton6.addEventListener("click", function () {
-    console.log("Image 6 loaded successfully");
-    imageModal.style.display = "block";
-});
 
 // Add a click event to the close button to hide the modal
 closeImageButton.addEventListener("click", function () {
