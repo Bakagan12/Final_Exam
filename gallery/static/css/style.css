@@ -1,0 +1,299 @@
+main {
+    margin-left: .01in;
+    border-radius: 10px;
+    animation: slide 2s ease-in-out infinite;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    /* Optional - to allow horizontal scrolling if the content overflows */
+}
+
+/* Add styles for the buttons */
+#btn-image {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.row {
+    transition: transform 0.3s;
+    border-radius: 10px;
+    width: 15%;
+    margin-left: .2in;
+    /* Remove default margin for the row */
+}
+
+.image {
+    border-radius: 10px;
+    width: 200px;
+    /* Set the width of the div to your desired size */
+    height: 200px;
+    /* Set the height of the div to your desired size */
+    overflow: hidden;
+    /* Hide the parts of the image that don't fit */
+
+}
+
+
+/* Ensure the image is centered within the square aspect ratio div */
+.image img {
+    background-size: cover;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+
+    display: flex;
+    overflow: hidden;
+    /* Set a fixed height to make all images the same size */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    background-color: gray;
+}
+
+h1 {
+    color: whitesmoke;
+}
+
+center {
+    margin-bottom: .3in;
+}
+
+a {
+    margin-left: .5in;
+}
+
+a:hover {
+    background-color: gray;
+}
+
+ul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.pictures,
+.album,
+.stories,
+.allpics {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.PICTURE {
+    /* Copy the styles for .PICTURE class here */
+    /* For example: */
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.ALL {
+    margin-left: .13in;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px
+}
+
+#all-photos {
+    margin-top: 10px;
+    display: none;
+}
+
+#back-button {
+    background-color: #3498db;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style for the close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+button {
+    width: 100%;
+    height: 100%;
+    margin-right: .2in;
+    background-size: cover;
+    /* Scale the background image to cover the button */
+    background-position: center;
+    /* Center the background image within the button */
+    background-repeat: no-repeat;
+    /* Prevent the background from repeating */
+    border: none;
+}
+
+
+.row:hover {
+    transform: scale(1.2);
+}
+
+a:hover {
+    border-radius: 5px;
+    background-color: cyan;
+    transition: background-color 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slide-in-element {
+    animation: slide-in 1s ease forwards;
+}
+
+@keyframes zoom-in-out {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.zoom-element {
+    animation: zoom-in-out 2s ease-in-out infinite;
+}
+
+.animate {
+    animation-play-state: running;
+}
+
+.show-animation {
+    animation: slideIn 1s forwards;
+}
+
+.hide-animation {
+    animation: slideOut 1s forwards;
+}
+
+
+.zoomed {
+    transform: scale(1.2);
+    /* You can adjust the scale factor for the zoom effect */
+}
+
+
+
+#in-image {
+    height: 100vh;
+    padding: 20px;
+}
+
+#view-images {
+    position: fixed;
+    z-index: 99px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#images1,
+#images2,
+#images3,
+#images4,
+#images5,
+#images6 {
+
+    border-radius: 8px;
+}
+
+#images1 #pic1,
+#images2 #pic2,
+#images3 #pic3,
+#images4 #pic4,
+#images5 #pic5,
+#images6 #pic6 {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin-bottom: 20px;
+    margin-left: 18%;
+}
