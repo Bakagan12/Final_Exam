@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %} Photos {% endblock %}
+
+{% block content %}
+<main role="main" class="main">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">{{ album.title }}</h1>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a
+                jumbotron and three supporting pieces of content. Use it as a starting point to create something more
+                unique.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        </div>
+    </div>
+    <div class="container" id="main">
+        <center><h1>Photos</h1></center>
+        <div class="row">
+            {% set photos_per_row = 5 %}
+            {% set photo_count = 0 %}
+            
+            {% for photo in photos %}
+                {% if photo_count % photos_per_row == 0 %}
+                    </div><div class="row">
+                {% endif %}
+                <div class="col-md-{{ 12 // photos_per_row }} mb-4">
+                    <div class="card">
+                        <img src="{{ photo.url }}" class="card-img-top" alt="{{ photo.title }}" style="max-height: 200px; width: 100px;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ photo.title }}</h5>
+                            <p class="card-text">{{ photo.description }}</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="{{ photo.url }}" class="card-img-top" alt="{{ photo.title }}" style="max-height: 200px; width: 100px;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ photo.title }}</h5>
+                            <p class="card-text">{{ photo.description }}</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                {% set photo_count = photo_count + 1 %}
+            {% endfor %}
+        </div>
+        
+    </div>
+    
+    <hr />
+</main>
+{% endblock %}
