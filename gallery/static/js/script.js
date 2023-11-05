@@ -60,12 +60,12 @@ const Image6 = document.getElementById('view-images6');
 
 
 // Get the button and image modal elements
-const showImageButton1 = document.getElementById("show-image-button1");
-const showImageButton2 = document.getElementById("show-image-button2");
-const showImageButton3 = document.getElementById("show-image-button3");
-const showImageButton4 = document.getElementById("show-image-button4");
-const showImageButton5 = document.getElementById("show-image-button5");
-const showImageButton6 = document.getElementById("show-image-button6");
+const showImage1 = document.getElementById("toggleButton1");
+const showImage2 = document.getElementById("toggleButton2");
+const showImage3 = document.getElementById("toggleButton3");
+const showImage4 = document.getElementById("toggleButton4");
+const showImage5 = document.getElementById("toggleButton5");
+const showImage6 = document.getElementById("toggleButton6");
 
 
 const imageModal = document.querySelector(".image-modal");
