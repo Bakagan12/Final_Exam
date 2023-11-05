@@ -5,6 +5,9 @@ import requests
 def home(request):
     return render(request, "home.html",{})
 
+def photos(request):
+    return render(request, "albums/photos.html",{})
+
 def albums(request):
     image_data = [
         {
