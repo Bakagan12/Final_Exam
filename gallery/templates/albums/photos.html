@@ -1,34 +1,14 @@
 {% extends 'base.html' %}
-{% block title %} Albums {% endblock %}
+{% block title %} Photos {% endblock %}
 {% block content %}
-{% load static %}
-<main role="main" >
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <div class="container">
-            <center><h1 class="display-3">My Albums</h1></center>
-        </div>
+<br><br><br>
+<div class="container">
+    <h1 class="text-center text-3xl">Photos from <span class="text-blue-500">{{ album.title }}</span></h1>
+    <br>
+    <div class="grid grid-cols-5 gap-5" style="gap: 3rem">
+        {% for i in photos %}
+            <img src="{{ i.url }}" alt="{{ i.title }}">
+        {% endfor %}
     </div>
-    
-        <div class="container" id="hidden-div">
-        <button id="backButton"><</button>
-        <center><h1 style="color:white;">Photos</h1></center>
-        <div class="row">
-
-            {% for photo in photos %}
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="{{ photo.url }}" class="card-img-top" alt="{{ photo.title }}" style="max-height: 250px;">
-                        <div class="card-body">
-                            <center><h5 class="card-title">{{ photo.title }}</h5></center>
-                            <p class="card-text">{{ photo.description }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    
-    </div>
-        <hr />
-</main>
+</div>
 {% endblock %}

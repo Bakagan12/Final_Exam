@@ -4,106 +4,41 @@
 {% load static %}
 <main role="main" >
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <div class="jumbotron" style="opacity: 0.5; background-color: rgba(255, 255, 255, 0.5);">
         <div class="container">
             <center><h1 class="display-3">My Albums</h1></center>
         </div>
     </div>
     
     {% comment %} Button images to show the photos {% endcomment %}
-    <div class="container_flex" id="container_flex">
-        <div class="row-image"style="background-color:gray;padding:20px;height:230px;">
+    <div class="container_flex" style="flex-wrap: wrap" id="container_flex">
+        {% for i in photos %}
+        <div class="row-image" style="background-color: gray; width: 300px; padding: 10px; height: 450px; border-radius: 10px;">
             <div class="col-md-4-images mb-4">
                 <div class="card-images" id="card-images">
                     <div class="card-bodyImages">
                         <div class="photo-container-images">
                             <button class="btn-img btn-primary photo-button" id="showImages">
-                                <img src="{% static "/images/img2.jpg" %}" alt="" class="photo-images">
+                                IMAGES NI SIYA DRI DAPITA
                             </button>
                         </div>
-                    <center>
-                        <h5>Image 1</h5>
-                        <p>12-12-12</p>
-                    </center>
+                        <center>
+                            <h5>{{ i.title }}</h5>
+                            <p>{{ i.date }}</p>
+                            <a class="btn" href="/photos/{{ i.id }}">View Photos</a>
+                        </center>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row-image"style="background-color:gray;padding:20px;height:230px;">
-            <div class="col-md-4-images mb-4">
-                <div class="card-images" id="card-images">
-                    <div class="card-bodyImages">
-                        <div class="photo-container-images">
-                            <button class="btn-img btn-primary photo-button" id="showImages1">
-                                <img src="{% static "/images/img9.jpeg" %}" alt="" class="photo-images">
-                            </button>
-                        </div>
-                    <center>
-                        <h5>Image 2</h5>
-                        <p>12-13-12</p>
-                    </center>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row-image"style="background-color:gray;padding:20px;height:230px;">
-            <div class="col-md-4-images mb-4">
-                <div class="card-images" id="card-images">
-                    <div class="card-bodyImages">
-                        <div class="photo-container-images">
-                            <button class="btn-img btn-primary photo-button" id="showImages2">
-                                <img src="{% static "/images/img5.jpg" %}" alt="" class="photo-images">
-                            </button>
-                        </div>
-                    <center>
-                        <h5>Image 3</h5>
-                        <p>12-14-12</p>
-                    </center>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
+    
         
 
-    <div class="container" id="hidden-div" style="display: none;">
-        <button id="backButton"><</button>
-        <center><h1 style="color:white;">Photos</h1></center>
-        <div class="row">
 
-            {% for photo in photos %}
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="{{ photo.url }}" class="card-img-top" alt="{{ photo.title }}" style="max-height: 250px;">
-                        <div class="card-body">
-                            <center><h5 class="card-title">{{ photo.title }}</h5></center>
-                            <p class="card-text">{{ photo.description }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    
-    </div>
-        <div class="container" id="hidden-div" style="display: none;">
-        <button id="backButton"><</button>
-        <center><h1 style="color:white;">Photos</h1></center>
-        <div class="row">
-
-            {% for photo in photos %}
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="{{ photo.url }}" class="card-img-top" alt="{{ photo.title }}" style="max-height: 250px;">
-                        <div class="card-body">
-                            <center><h5 class="card-title">{{ photo.title }}</h5></center>
-                            <p class="card-text">{{ photo.description }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    
     </div>
         <hr />
 </main>
+<br><br>
 {% endblock %}

@@ -28,7 +28,8 @@ img {
 
 h2,
 h4,
-p {
+p,
+a {
     color: white;
 }
 
@@ -67,6 +68,7 @@ p {
 
 .photo-container-images {
     width: 100%;
+    height: 300px;
     /* Make the image container the same width as the card */
 }
 
@@ -75,11 +77,13 @@ p {
     border: none;
     padding: 0;
     cursor: pointer;
+    width: 200px;
+    height: 300px;
 }
 
 .photo-images {
     width: 200px;
     /* Make all images the same width */
-    height: auto;
+    height: 300px;
     /* Maintain aspect ratio */
 }

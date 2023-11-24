@@ -39,7 +39,6 @@ main {
     position: relative;
     width: 200px;
     height: 200px;
-    background-color: #f0f0f0;
 
     display: flex;
     overflow: hidden;
@@ -77,6 +76,8 @@ center {
 
 a {
     margin-left: .5in;
+    color: white;
+    background-attachment: gray;
 }
 
 a:hover {
@@ -171,7 +172,6 @@ ul {
 button {
     width: 100%;
     height: 100%;
-    margin-right: .2in;
     background-size: cover;
     /* Scale the background image to cover the button */
     background-position: center;
